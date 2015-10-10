@@ -26,11 +26,3 @@ extern "C" void __cxa_pure_virtual() {;}
 #include "C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard\pins_arduino.h" 
 #include "C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\arduino.h"
 #include <SsAtmOdytron.ino>
-#include <Ody.cpp>
-#include <Ody.h>
-#include <OdyEngine.cpp>
-#include <OdyEngine.h>
-#include <OdyEngineBase.h>
-#include <OdyPatch.cpp>
-#include <OdyPatch.h>
-#include <OdyPatchBase.h>
