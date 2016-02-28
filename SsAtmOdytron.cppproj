@@ -2,9 +2,9 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectVersion>6.2</ProjectVersion>
+    <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
-    <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
+    <ProjectGuid>{3f80376e-755c-4290-bb5f-270870c33e23}</ProjectGuid>
     <avrdevice>atmega328p</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -18,7 +18,8 @@
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
-    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <OverrideVtorValue>
+    </OverrideVtorValue>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
@@ -26,14 +27,13 @@
     <UncachedRange />
     <BootSegment>0</BootSegment>
     <AsfFrameworkConfig>
-      <framework-data>
+      <framework-data xmlns="">
         <options />
         <configurations />
         <files />
         <documentation help="" />
-        <offline-documentation help="" />
         <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.10.1" />
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
@@ -42,6 +42,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega328p"</avrgcc.common.Device>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
@@ -53,7 +54,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=165</Value>
+      <Value>ARDUINO=167</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -66,54 +67,54 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular</Value>
+      <Value>D:/Documents/Arduino/libraries/Led/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Led</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl</Value>
       <Value>../../SsAtmOdytron</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
@@ -124,11 +125,13 @@
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=165</Value>
+      <Value>ARDUINO=167</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -141,54 +144,54 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular</Value>
+      <Value>D:/Documents/Arduino/libraries/Led/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Led</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl</Value>
       <Value>../../SsAtmOdytron</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
@@ -202,16 +205,12 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../SsAtmOdytron;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder;C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers;C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Paul Soulsby/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
-    <VisualMicroSettings>
-      <VisualMicroSettings>
-        <arduino.upload.port>COM78</arduino.upload.port>
-      </VisualMicroSettings>
-    </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../SsAtmOdytron;D:/Documents/Arduino/libraries/AnalogueControl;D:/Documents/Arduino/libraries/AnalogueControl/utility;D:/Documents/Arduino/libraries/AtmHardware;D:/Documents/Arduino/libraries/AtmHardware/utility;D:/Documents/Arduino/libraries/Envelope;D:/Documents/Arduino/libraries/Envelope/utility;D:/Documents/Arduino/libraries/Led;D:/Documents/Arduino/libraries/Led/utility;D:/Documents/Arduino/libraries/LedCircular;D:/Documents/Arduino/libraries/LedCircular/utility;D:/Documents/Arduino/libraries/LedRgb;D:/Documents/Arduino/libraries/LedRgb/utility;D:/Documents/Arduino/libraries/Midi;D:/Documents/Arduino/libraries/Midi/utility;D:/Documents/Arduino/libraries/Ody;D:/Documents/Arduino/libraries/Ody/utility;D:/Documents/Arduino/libraries/OdyAmplifier;D:/Documents/Arduino/libraries/OdyAmplifier/utility;D:/Documents/Arduino/libraries/OdyAudio;D:/Documents/Arduino/libraries/OdyAudio/utility;D:/Documents/Arduino/libraries/OdyEngine;D:/Documents/Arduino/libraries/OdyEngine/utility;D:/Documents/Arduino/libraries/OdyFilter;D:/Documents/Arduino/libraries/OdyFilter/utility;D:/Documents/Arduino/libraries/OdyHpf;D:/Documents/Arduino/libraries/OdyHpf/utility;D:/Documents/Arduino/libraries/OdyLfo;D:/Documents/Arduino/libraries/OdyLfo/utility;D:/Documents/Arduino/libraries/OdyNoise;D:/Documents/Arduino/libraries/OdyNoise/utility;D:/Documents/Arduino/libraries/OdyOscillator;D:/Documents/Arduino/libraries/OdyOscillator/utility;D:/Documents/Arduino/libraries/OdyPatch;D:/Documents/Arduino/libraries/OdyPatch/utility;D:/Documents/Arduino/libraries/OdyPitch;D:/Documents/Arduino/libraries/OdyPitch/utility;D:/Documents/Arduino/libraries/Portamento;D:/Documents/Arduino/libraries/Portamento/utility;D:/Documents/Arduino/libraries/RotaryEncoder;D:/Documents/Arduino/libraries/RotaryEncoder/utility;D:/Documents/Arduino/libraries/SsHelpers;D:/Documents/Arduino/libraries/SsHelpers/utility;D:/Documents/Arduino/libraries/Switch;D:/Documents/Arduino/libraries/Switch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers;D:/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega328p"</avrgcc.common.Device>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
@@ -223,7 +222,7 @@
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=165</Value>
+      <Value>ARDUINO=167</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -236,54 +235,54 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular</Value>
+      <Value>D:/Documents/Arduino/libraries/Led/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Led</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl</Value>
       <Value>../../SsAtmOdytron</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
@@ -294,11 +293,13 @@
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>__AVR_ATmega328p__</Value>
       <Value>__AVR_ATmega328P__</Value>
-      <Value>ARDUINO=165</Value>
+      <Value>ARDUINO=167</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -311,54 +312,54 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries</Value>
-      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility</Value>
-      <Value>C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Switch</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/SsHelpers</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/RotaryEncoder</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Portamento</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPitch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyPatch</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyOscillator</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyNoise</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyLfo</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyHpf</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyFilter</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyEngine</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAudio</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/OdyAmplifier</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Ody</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Midi</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedRgb</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/LedCircular</Value>
+      <Value>D:/Documents/Arduino/libraries/Led/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Led</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/Envelope</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AtmHardware</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl/utility</Value>
+      <Value>D:/Documents/Arduino/libraries/AnalogueControl</Value>
       <Value>../../SsAtmOdytron</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
@@ -372,12 +373,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../SsAtmOdytron;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AnalogueControl/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware;C:/Users/Paul Soulsby/Documents/Arduino/libraries/AtmHardware/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Envelope/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Led/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedCircular/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb;C:/Users/Paul Soulsby/Documents/Arduino/libraries/LedRgb/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Midi/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Ody/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAmplifier/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyAudio/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyEngine/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyFilter/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyHpf/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyLfo/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyNoise/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyOscillator/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPatch/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/OdyPitch/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Portamento/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder;C:/Users/Paul Soulsby/Documents/Arduino/libraries/RotaryEncoder/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers;C:/Users/Paul Soulsby/Documents/Arduino/libraries/SsHelpers/utility;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch;C:/Users/Paul Soulsby/Documents/Arduino/libraries/Switch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Paul Soulsby/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
-    <VisualMicroSettings>
-      <VisualMicroSettings>
-        <arduino.upload.port>COM78</arduino.upload.port>
-      </VisualMicroSettings>
-    </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../SsAtmOdytron;D:/Documents/Arduino/libraries/AnalogueControl;D:/Documents/Arduino/libraries/AnalogueControl/utility;D:/Documents/Arduino/libraries/AtmHardware;D:/Documents/Arduino/libraries/AtmHardware/utility;D:/Documents/Arduino/libraries/Envelope;D:/Documents/Arduino/libraries/Envelope/utility;D:/Documents/Arduino/libraries/Led;D:/Documents/Arduino/libraries/Led/utility;D:/Documents/Arduino/libraries/LedCircular;D:/Documents/Arduino/libraries/LedCircular/utility;D:/Documents/Arduino/libraries/LedRgb;D:/Documents/Arduino/libraries/LedRgb/utility;D:/Documents/Arduino/libraries/Midi;D:/Documents/Arduino/libraries/Midi/utility;D:/Documents/Arduino/libraries/Ody;D:/Documents/Arduino/libraries/Ody/utility;D:/Documents/Arduino/libraries/OdyAmplifier;D:/Documents/Arduino/libraries/OdyAmplifier/utility;D:/Documents/Arduino/libraries/OdyAudio;D:/Documents/Arduino/libraries/OdyAudio/utility;D:/Documents/Arduino/libraries/OdyEngine;D:/Documents/Arduino/libraries/OdyEngine/utility;D:/Documents/Arduino/libraries/OdyFilter;D:/Documents/Arduino/libraries/OdyFilter/utility;D:/Documents/Arduino/libraries/OdyHpf;D:/Documents/Arduino/libraries/OdyHpf/utility;D:/Documents/Arduino/libraries/OdyLfo;D:/Documents/Arduino/libraries/OdyLfo/utility;D:/Documents/Arduino/libraries/OdyNoise;D:/Documents/Arduino/libraries/OdyNoise/utility;D:/Documents/Arduino/libraries/OdyOscillator;D:/Documents/Arduino/libraries/OdyOscillator/utility;D:/Documents/Arduino/libraries/OdyPatch;D:/Documents/Arduino/libraries/OdyPatch/utility;D:/Documents/Arduino/libraries/OdyPitch;D:/Documents/Arduino/libraries/OdyPitch/utility;D:/Documents/Arduino/libraries/Portamento;D:/Documents/Arduino/libraries/Portamento/utility;D:/Documents/Arduino/libraries/RotaryEncoder;D:/Documents/Arduino/libraries/RotaryEncoder/utility;D:/Documents/Arduino/libraries/SsHelpers;D:/Documents/Arduino/libraries/SsHelpers/utility;D:/Documents/Arduino/libraries/Switch;D:/Documents/Arduino/libraries/Switch/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/yrrup5ek.rgm/Micro Platforms/default/debuggers;D:/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <ItemGroup>
     <None Include="SsAtmOdytron.ino">
@@ -385,10 +381,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Visual Micro\" />
+    <Folder Include="__vm\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Visual Micro\.SsAtmOdytron.vsarduino.h">
+    <Compile Include="__vm\.SsAtmOdytron.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
